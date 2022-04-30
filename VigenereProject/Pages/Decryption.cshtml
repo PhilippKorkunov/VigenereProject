@@ -1,0 +1,21 @@
+﻿@page
+@model VigenereProject.Pages.DecryptionModel
+@{
+     ViewData["Title"] = "Дешифровать текст текст";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Загрузите файл с расширением .txt или .docx, в котором содержится текст для дешифровки</p>
+<p>Ключ должен содержать только символы русского алфавита. Алгоритм работает только с символами русского алфавита.ЕСЛИ ЗАГРУЗКА ФАЙЛА НЕ НАЧИЛАСЬ, ТО:</p>
+<p>1)Был неверный формат файла</p>
+<p>2)Был неверный формат ключа</p>
+@{
+    ViewBag.Title = "Upload";
+}
+<h2>Выберите файл, а затем введите ключ для дешифровки:</h2>
+<form method="post" enctype="multipart/form-data">
+    <input type="file" name="file" class="form-control" as/><br>
+    <input type="text" name="text"/>
+    <button type="submit" class="btn btn-primary">Расшифровать</button>
+</form>
+
